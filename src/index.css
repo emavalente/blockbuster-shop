@@ -1,9 +1,13 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #0b0b0c;
+  height: 100vh;
+  background-color: #333;
+  opacity: 0.8;
+  background-image: linear-gradient(#4f5156 1px, transparent 1px), linear-gradient(to right, #4f5156 1px, #333 1px);
+  background-size: 20px 20px;
 }
