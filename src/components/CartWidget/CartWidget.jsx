@@ -4,8 +4,8 @@ import "./CartWidget.css";
 function CartWidget() {
   return (
     <div className="cartButton">
-      <i class="cartButton__icon fas fa-shopping-cart">
-        <spam className="cartButton__counter">10</spam>
+      <i className="cartButton__icon fas fa-shopping-cart">
+        <span className="cartButton__counter">10</span>
       </i>
     </div>
   );

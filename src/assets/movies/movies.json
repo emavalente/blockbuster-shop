@@ -1,0 +1,93 @@
+[
+    {
+        "id": 1,
+        "thumbnail": "https://i.postimg.cc/Jz4W0MJT/poster-01.jpg",
+        "title": "The Batman",
+        "genere":"Aventura",
+        "premiereDate": "invalid",
+        "rate": 5,
+        "director": "Matt Reeves"
+    },
+    {
+        "id": 2,
+        "thumbnail": "https://i.postimg.cc/MK6LbtTH/poster-02.jpg",
+        "title": "The Avengers",
+        "genere":"Aventura",
+        "premiereDate": "invalid",
+        "rate": 5,
+        "director": "Matt Reeves"
+    },
+    {
+        "id": 3,
+        "thumbnail": "https://i.postimg.cc/jqQ97BRB/poster-03.jpg",
+        "title": "An American Werewolf in London",
+        "genere":"Terror",
+        "premiereDate": "invalid",
+        "rate": 5,
+        "director": "Matt Reeves"
+    },
+    {
+        "id": 4,
+        "thumbnail": "https://i.postimg.cc/MpXrgT18/poster-04.webp",
+        "title": "Titanic",
+        "genere":"Drama",
+        "premiereDate": "invalid",
+        "rate": 5,
+        "director": "Matt Reeves"
+    },
+    {
+        "id": 5,
+        "thumbnail": "https://i.postimg.cc/QxmRRwPc/poster-07.jpg",
+        "title": "Dragon Ball Super: Super Heros",
+        "genere":"Animación",
+        "premiereDate": "invalid",
+        "rate": 5,
+        "director": "Matt Reeves"
+    },
+    {
+        "id": 6,
+        "thumbnail": "https://i.postimg.cc/vmV2HNPq/poster-05.webp",
+        "title": "Avatar",
+        "genere":"Ciencia Ficción",
+        "premiereDate": "invalid",
+        "rate": 5,
+        "director": "Matt Reeves"
+    },
+    {
+        "id": 7,
+        "thumbnail": "https://i.postimg.cc/sgtK8JVp/poster-09.jpg",
+        "title": "Top Gun",
+        "genere":"Drama",
+        "premiereDate": "invalid",
+        "rate": 5,
+        "director": "Matt Reeves"
+    },
+    {
+        "id": 8,
+        "thumbnail": "https://i.postimg.cc/L56VfCTM/poster-10.jpg",
+        "title": "Interstellar",
+        "genere":"Ciencia Ficción",
+        "premiereDate": "invalid",
+        "rate": 5,
+        "director": "Matt Reeves"
+    },
+    {
+        "id": 8,
+        "thumbnail": "https://i.postimg.cc/nh5wxJ19/poster-08.jpg",
+        "title": "Dragon Ball Super: Broly",
+        "genere":"Animación",
+        "premiereDate": "invalid",
+        "rate": 9,
+        "director": "Matt Reeves"
+    },
+    {
+        "id": 8,
+        "thumbnail": "https://i.postimg.cc/c4FbDYgm/poster-06.jpg",
+        "title": "NOPE",
+        "genere":"Terror",
+        "premiereDate": "invalid",
+        "rate": 7,
+        "director": "Matt Reeves"
+    }
+
+]
