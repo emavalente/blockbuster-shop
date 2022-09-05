@@ -1,0 +1,87 @@
+.itemCard {
+  width: 210px;
+  height: 460px;
+  display: flex;
+  flex-direction: column;
+  background-color: #141414;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+}
+
+.itemCard__btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.itemCard__btn button {
+  background-color: transparent;
+  border: none;
+  position: relative;
+}
+
+.itemCard__btn img {
+  width: 200px;
+  height: 296px;
+  cursor: pointer;
+}
+
+.itemCard__btn img:hover {
+  outline: 2px solid #fa9eb5;
+}
+
+.itemCard__btn:hover div.detalle {
+  opacity: 1;
+  visibility: visible;
+}
+
+.itemCard .detalle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 25%;
+  background-color: rgba(49, 46, 46, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fa9eb5;
+  font-family: "Secular One", sans-serif;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: visibility 0.5s, opacity 0.5s;
+}
+
+.itemCard__title h3 {
+  font-family: "Secular One", sans-serif;
+  font-size: 1em;
+  color: #fa9eb5;
+}
+
+.itemCard__description {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 0.8em;
+}
+
+.itemCard__description p i {
+  margin-right: 5px;
+}
+
+.itemCard__precio {
+  color: antiquewhite;
+  font-size: 0.9em;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.itemCard__precio h3 {
+  align-self: flex-end;
+}

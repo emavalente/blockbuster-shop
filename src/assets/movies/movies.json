@@ -1,93 +1,123 @@
 [
     {
         "id": 1,
-        "thumbnail": "https://i.postimg.cc/Jz4W0MJT/poster-01.jpg",
-        "title": "The Batman",
-        "genere":"Aventura",
+        "thumbnail": "https://i.postimg.cc/g2StrXps/poster-11.jpg",
+        "title": "Tonight she comes",
+        "genere":"Terror",
         "premiereDate": "invalid",
-        "rate": 5,
-        "director": "Matt Reeves"
+        "stars": 5,
+        "director": "invalid",
+        "type":"movie"
     },
     {
         "id": 2,
-        "thumbnail": "https://i.postimg.cc/MK6LbtTH/poster-02.jpg",
-        "title": "The Avengers",
-        "genere":"Aventura",
+        "thumbnail": "https://i.postimg.cc/1zdd7gYX/poster-12.jpg",
+        "title": "It",
+        "genere":"Terror",
         "premiereDate": "invalid",
-        "rate": 5,
-        "director": "Matt Reeves"
+        "stars": 8,
+        "director": "invalid",
+        "type": "movie"
     },
     {
         "id": 3,
-        "thumbnail": "https://i.postimg.cc/jqQ97BRB/poster-03.jpg",
-        "title": "An American Werewolf in London",
-        "genere":"Terror",
+        "thumbnail": "https://i.postimg.cc/kXCpHPwQ/poster-13.jpg",
+        "title": "Joker",
+        "genere":"Drama",
         "premiereDate": "invalid",
-        "rate": 5,
-        "director": "Matt Reeves"
+        "stars": 5,
+        "director": "invalid",
+        "type": "movie"
     },
     {
         "id": 4,
-        "thumbnail": "https://i.postimg.cc/MpXrgT18/poster-04.webp",
-        "title": "Titanic",
-        "genere":"Drama",
+        "thumbnail": "https://i.postimg.cc/Y0Ksk57w/poster-14.jpg",
+        "title": "Spider-Man Homecoming",
+        "genere":"Aventura",
         "premiereDate": "invalid",
-        "rate": 5,
-        "director": "Matt Reeves"
+        "stars": 7,
+        "director": "invalid",
+        "type": "movie"
     },
     {
         "id": 5,
-        "thumbnail": "https://i.postimg.cc/QxmRRwPc/poster-07.jpg",
-        "title": "Dragon Ball Super: Super Heros",
+        "thumbnail": "https://i.postimg.cc/Y06ySd2L/poster-15.jpg",
+        "title": "Buscando a Nemo",
         "genere":"Animación",
         "premiereDate": "invalid",
-        "rate": 5,
-        "director": "Matt Reeves"
+        "stars": 8,
+        "director": "invalid",
+        "type": "movie"
     },
     {
         "id": 6,
-        "thumbnail": "https://i.postimg.cc/vmV2HNPq/poster-05.webp",
-        "title": "Avatar",
-        "genere":"Ciencia Ficción",
+        "thumbnail": "https://i.postimg.cc/fL0rGw6K/poster-16.jpg",
+        "title": "John Wick - chapter 2",
+        "genere":"Acción",
         "premiereDate": "invalid",
-        "rate": 5,
-        "director": "Matt Reeves"
+        "stars": 8,
+        "director": "invalid",
+        "type": "movie"
     },
     {
         "id": 7,
-        "thumbnail": "https://i.postimg.cc/sgtK8JVp/poster-09.jpg",
-        "title": "Top Gun",
-        "genere":"Drama",
-        "premiereDate": "invalid",
-        "rate": 5,
-        "director": "Matt Reeves"
-    },
-    {
-        "id": 8,
-        "thumbnail": "https://i.postimg.cc/L56VfCTM/poster-10.jpg",
+        "thumbnail": "https://i.postimg.cc/5NmRdKkZ/poster-17.jpg",
         "title": "Interstellar",
         "genere":"Ciencia Ficción",
         "premiereDate": "invalid",
-        "rate": 5,
-        "director": "Matt Reeves"
+        "stars": 9,
+        "director": "Christopher Nolan",
+        "type": "movie"
     },
     {
         "id": 8,
-        "thumbnail": "https://i.postimg.cc/nh5wxJ19/poster-08.jpg",
-        "title": "Dragon Ball Super: Broly",
-        "genere":"Animación",
-        "premiereDate": "invalid",
-        "rate": 9,
-        "director": "Matt Reeves"
-    },
-    {
-        "id": 8,
-        "thumbnail": "https://i.postimg.cc/c4FbDYgm/poster-06.jpg",
-        "title": "NOPE",
+        "thumbnail": "https://i.postimg.cc/Vsnh4k9s/poster-18.jpg",
+        "title": "The Nun",
         "genere":"Terror",
         "premiereDate": "invalid",
-        "rate": 7,
-        "director": "Matt Reeves"
+        "stars": 6,
+        "director": "invalid",
+        "type": "movie"
+    },
+    {
+        "id": 8,
+        "thumbnail": "https://i.postimg.cc/8C7KvpPS/poster-19.jpg",
+        "title": "Jurassic World - Fallen Kingdom",
+        "genere":"Ciencia Ficción",
+        "premiereDate": "invalid",
+        "stars": 9,
+        "director": "Steven Spielberg",
+        "type": "movie"
+    },
+    {
+        "id": 8,
+        "thumbnail": "https://i.postimg.cc/HksPp0qj/poster-20.jpg",
+        "title": "Harry Potter - and the order of the fenix",
+        "genere":"Aventura",
+        "premiereDate": "invalid",
+        "stars": 7,
+        "director": "invalid",
+        "type": "movie"
+    },
+    {
+        "id": 9,
+        "thumbnail": "https://i.postimg.cc/RFfgPgHp/poster-21.jpg",
+        "title": "E.T",
+        "genere":"Aventura",
+        "premiereDate": "invalid",
+        "stars": 7,
+        "director": "Steven Spielberg",
+        "type": "movie"
+    },
+    {
+        "id": 10,
+        "thumbnail": "https://i.postimg.cc/jjB8QpLJ/poster-22.jpg",
+        "title": "The Incredibles",
+        "genere":"Animacion",
+        "premiereDate": "invalid",
+        "stars": 7,
+        "director": "invalid",
+        "type": "movie"
     }
 
 ]

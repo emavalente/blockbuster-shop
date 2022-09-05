@@ -1,6 +1,6 @@
 import React from "react";
 import "./ItemListContainer.css";
-import ItemCount from "../ItemCount/ItemCount";
+import ItemList from "../ItemList/ItemList";
 
 function ItemListContainer(props) {
   const onAdd = (count) => {
@@ -9,9 +9,7 @@ function ItemListContainer(props) {
 
   return (
     <div className="main">
-      <h2 className="main__content ">{props.gretting}</h2>
-      {/* Por sintaxis de JSX los numeros enviados por props deben ir entre {} */}
-      <ItemCount stock={5} initValue={1} onAdd={onAdd} />
+      <ItemList />
     </div>
   );
 }

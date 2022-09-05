@@ -1,0 +1,11 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  height: 100%;
+  background-image: linear-gradient(#4f5156 1px, transparent 1px), linear-gradient(to right, #4f5156 1px, #363636 1px);
+  background-size: 20px 20px;
+}
