@@ -4,3 +4,10 @@
   align-items: center;
   justify-content: space-evenly;
 }
+
+.loadingText {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1em;
+  color: #fff;
+  text-align: center;
+}

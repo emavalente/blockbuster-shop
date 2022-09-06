@@ -2,9 +2,11 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "./ItemList.css";
 import Item from "../Item/Item";
+import { CircleSpinnerOverlay } from "react-spinner-overlay";
 
 function ItemList({ items }) {
   const [movies, setMovies] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   //componentDidMount
   // donde un componente necesita hacer algo al montarse es donde se define useEffect.
@@ -31,7 +33,7 @@ function ItemList({ items }) {
 
   return (
     <div className="cardContainer">
-      {movies.lenght ? (
+      {movies.length ? (
         movies.map((item) => (
           <Item
             key={item.id}
@@ -43,7 +45,13 @@ function ItemList({ items }) {
           />
         ))
       ) : (
-        <p>Loading Movies...</p>
+        <CircleSpinnerOverlay
+          loading={loading}
+          size={42}
+          color="rgb(255 158 181)"
+          overlayColor="rgb(255 158 181 / 0%)"
+          message={<p className="loadingText">CARGANDO DATOS...</p>}
+        />
       )}
     </div>
   );
