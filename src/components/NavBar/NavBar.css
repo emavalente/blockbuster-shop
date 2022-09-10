@@ -4,6 +4,7 @@
   position: fixed;
   z-index: 99;
   background-color: #000000;
+  box-shadow: 10px 0 20px #000000;
 }
 
 .navBar__container {
@@ -19,6 +20,7 @@
   list-style: none;
   display: flex;
   align-items: center;
+  margin-right: auto;
 }
 
 .navBar__menu li a {
@@ -29,4 +31,9 @@
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
+}
+
+.navBar__menu li:hover a {
+  color: #f7c7d3;
+  text-decoration: underline;
 }

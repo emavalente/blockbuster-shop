@@ -52,7 +52,6 @@
   align-items: center;
   justify-content: center;
   color: #fa9eb5;
-  font-family: "Secular One", sans-serif;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -61,7 +60,7 @@
 
 .itemCard__title h3 {
   font-family: "Secular One", sans-serif;
-  font-size: 1em;
+  font-size: 0.8em;
   color: #fa9eb5;
 }
 

@@ -9,6 +9,9 @@ function NavBar() {
         <img src={branch}></img>
         <ul className="navBar__menu">
           <li>
+            <a href="#">Inicio</a>
+          </li>
+          <li>
             <a href="#">Peliculas</a>
           </li>
           <li>
