@@ -25,9 +25,10 @@ function ItemDetail(props) {
         <div className="detail__description detail__description--transparent">
           <h3 className="description__title">{title}</h3>
           <div className="description__miniText">
-            <p className="description__time">{time}</p> / <p className="description__premier">Fecha: {premiereDate}</p>/{" "}
-            <p className="description__genere">Género: {genere}</p> /
-            <p className="description__director">Director: {director}</p>
+            <p className="description__time">{time}</p>
+            <p className="description__premier">/ Fecha: {premiereDate}</p>
+            <p className="description__genere">/ Género: {genere}</p>
+            <p className="description__director"> / Director: {director}</p>
           </div>
           <p className="description__sinopsisTitle">Sinopsis: </p>
           <div className="description__sinopsisText">
