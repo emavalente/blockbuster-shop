@@ -8,19 +8,19 @@ function ItemCount({ initValue, stock, onAdd }) {
     count < stock ? setCount(count + 1) : alert("No quedan más productos en stock");
   };
 
-  const quitarItem = () => {
+  const restarItem = () => {
     count > 1 ? setCount(count - 1) : alert("Agrega al menos 1 producto!");
   };
 
   return (
-    <div className="counterContainer">
-      <div className="controlsContainer">
-        <button onClick={quitarItem}>-</button>
+    <div className="counter">
+      <div className="counter__controls">
+        <button className="counter__controlsbtn" onClick={restarItem}>-</button>
         <label>{count}</label>
-        <button onClick={sumarItem}>+</button>
+        <button className="counter__controlsbtn" onClick={sumarItem}>+</button>
       </div>
       <button
-        className="botonAgregar"
+        className="counter__controlsbtn counter__controlsbtn--agregar"
         onClick={() => {
           onAdd(count);
         }}

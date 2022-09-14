@@ -11,7 +11,7 @@ const array = [
     sinopsis:
       "Después de que una chica desaparezca, sus amigas y unos extraños van al lugar de la desaparición. Una cabaña en el bosque en la que reirán, beberán, se besarán y sufrirán todas las consecuencias de sus actos.",
     trailer: "https://www.imdb.com/video/vi2824648473/?playlistId=tt5161376&ref_=tt_ov_vi",
-    type: "movie",
+    type: "movies",
     stock: 5,
     price: (1.5).toFixed(2),
   },
@@ -27,7 +27,7 @@ const array = [
     sinopsis:
       "En el verano de 1989, un grupo de niños víctimas de acoso escolar se une para destruir a un monstruo que cambia de forma, que se disfraza de payaso y se aprovecha de los niños de Derry, su pequeña ciudad de Maine.",
     trailer: "https://www.imdb.com/video/vi1396095257/?playlistId=tt1396484&ref_=tt_pr_ov_vi",
-    type: "movie",
+    type: "movies",
     stock: 5,
     price: (2.0).toFixed(2),
   },
@@ -43,7 +43,7 @@ const array = [
     sinopsis:
       "En Gotham, Arthur Fleck, un comediante con problemas de salud mental, es marginado y maltratado por la sociedad. Se adentra en una espiral de crimen que resulta revolucionaria. Pronto conoce a su alter-ego, el Joker.",
     trailer: "https://www.imdb.com/video/vi1723318041/?playlistId=tt7286456&ref_=tt_ov_vi",
-    type: "movie",
+    type: "movies",
     stock: 5,
     price: (3.0).toFixed(2),
   },
@@ -59,7 +59,7 @@ const array = [
     sinopsis:
       "Peter Parker compagina su vida de estudiante ordinario de instituto en Queens con su alter ego de superhéroe, Spider-Man, y se encuentra tras la pista de una nueva amenaza que merodea por los cielos de Nueva York.",
     triler: "https://www.imdb.com/video/vi4175083801/?playlistId=tt2250912&ref_=tt_ov_vi",
-    type: "movie",
+    type: "movies",
     stock: 5,
     price: (2.0).toFixed(2),
   },
@@ -74,7 +74,7 @@ const array = [
     director: "Andrew Staton & Lee Unkrich",
     sinopsis: "Cuando su hijo es capturado, un tímido pez payaso se embarca en un viaje para traerlo a casa.",
     trailer: "https://www.imdb.com/video/vi2687214105/?playlistId=tt0266543&ref_=tt_ov_vi",
-    type: "movie",
+    type: "movies",
     stock: 5,
     price: (2.5).toFixed(2),
   },
@@ -90,7 +90,7 @@ const array = [
     sinopsis:
       "Al regresar al inframundo criminal para pagar una deuda, John Wick descubre que se le ha puesto precio a su cabeza.",
     trailer: "https://www.imdb.com/video/vi1127331353/?playlistId=tt4425200&ref_=tt_ov_vi",
-    type: "movie",
+    type: "movies",
     stock: 5,
     price: (3.0).toFixed(2),
   },
@@ -106,7 +106,7 @@ const array = [
     sinopsis:
       "Un equipo de exploradores viaja a través de un agujero de gusano en el espacio en un intento de garantizar la supervivencia de la humanidad.",
     trailer: "https://www.imdb.com/video/vi1586278169/?playlistId=tt0816692&ref_=tt_ov_vi",
-    type: "movie",
+    type: "movies",
     stock: 5,
     price: (3.0).toFixed(2),
   },
@@ -122,7 +122,7 @@ const array = [
     sinopsis:
       "Un sacerdote con un pasado maldito y una novicia en el umbral de sus últimos votos son enviados por el Vaticano para investigar la muerte de una joven monja en Rumanía y enfrentarse a una fuerza malévola en forma de monja demoníaca.",
     trailer: "https://www.imdb.com/video/vi2039200537/?playlistId=tt5814060&ref_=tt_pr_ov_vi",
-    type: "movie",
+    type: "movies",
     stock: 5,
     price: (2.0).toFixed(2),
   },
@@ -138,7 +138,7 @@ const array = [
     sinopsis:
       "Cuando el volcán inactivo de la isla empieza a rugir, Owen y Claire organizan una campaña para rescatar a los dinosaurios restantes de este evento de nivel de extinción.",
     trailer: "https://www.imdb.com/video/vi2465250073/?playlistId=tt4881806&ref_=tt_pr_ov_vi",
-    type: "movie",
+    type: "movies",
     stock: 5,
     price: (2.0).toFixed(2),
   },
@@ -154,7 +154,7 @@ const array = [
     sinopsis:
       "Harry y Dumbledore intentan alertar a la comunidad mágica del retorno de Voldemort, para burla general, y se convierten en el foco de una campaña de descrédito a manos de las autoridades mágicas, mientras una burócrata autoritaria toma las riendas de Hogwarts.",
     trailer: "https://www.imdb.com/video/vi2192310553/?playlistId=tt0373889&ref_=tt_ov_vi",
-    type: "movie",
+    type: "movies",
     stock: 5,
     price: (3.5).toFixed(2),
   },
@@ -163,10 +163,14 @@ const array = [
     thumbnail: "https://i.postimg.cc/RFfgPgHp/poster-21.jpg",
     title: "E.T",
     genere: "Aventura",
-    premiereDate: "invalid",
+    time: "1h 55min",
+    premiereDate: "1982",
     stars: 7.9,
     director: "Steven Spielberg",
-    type: "movie",
+    sinopsis:
+      "Un niño con problemas se arma de valor para ayudar a un amistoso alienígena a escapar de la Tierra y regresar a su mundo natal.",
+    trailer: "https://www.imdb.com/video/vi3090130201/?playlistId=tt0083866&ref_=tt_ov_vi",
+    type: "movies",
     price: (2.5).toFixed(2),
   },
   {
@@ -174,14 +178,13 @@ const array = [
     thumbnail: "https://i.postimg.cc/jjB8QpLJ/poster-22.jpg",
     title: "The Incredibles",
     genere: "Animacion",
-    time: "1h 55min",
-    premiereDate: "1982",
+    time: "",
+    premiereDate: "",
     stars: 7,
     director: "Steven Spielberg",
-    sinopsis:
-      "Un niño con problemas se arma de valor para ayudar a un amistoso alienígena a escapar de la Tierra y regresar a su mundo natal.",
-    trailer: "https://www.imdb.com/video/vi3090130201/?playlistId=tt0083866&ref_=tt_ov_vi",
-    type: "movie",
+    sinopsis: "",
+    trailer: "",
+    type: "movies",
     stock: 5,
     price: (3.0).toFixed(2),
   },
@@ -229,7 +232,7 @@ const array = [
     sinopsis:
       "Los viajes de un cazarrecompensas solitario en los confines de la galaxia, lejos de la autoridad de la Nueva República.",
     trailer: "https://www.imdb.com/video/vi1311228185/?playlistId=tt8111088&ref_=tt_ov_vi",
-    type: "serie",
+    type: "series",
     stock: 5,
     price: (3.0).toFixed(2),
   },
@@ -245,7 +248,7 @@ const array = [
     sinopsis:
       "Un estudiante medio de instituto y su mejor amigo se ven envueltos en un problema que le hace recibir una mordedura de hombre lobo. Como resultado se encuentran en medio de todo tipo de dramas en Beacon Hills.",
     trailer: "https://www.imdb.com/video/vi3872307481/?playlistId=tt1567432&ref_=tt_ov_vi",
-    type: "serie",
+    type: "series",
     stock: 5,
     price: (3.0).toFixed(2),
   },
@@ -261,7 +264,7 @@ const array = [
     sinopsis:
       "Cuando el creador de una realidad virtual llamada OASIS muere, lanza un reto póstumo a todos sus usuarios para que busquen un huevo de pascua, que dará al que lo encuentre su fortuna y el control de su mundo.",
     trailer: "https://www.imdb.com/video/vi2568140825/?playlistId=tt1677720&ref_=tt_ov_vi",
-    type: "movie",
+    type: "movies",
     stock: 5,
     price: (2.0).toFixed(2),
   },
@@ -277,7 +280,7 @@ const array = [
     sinopsis:
       "Un hombre de la frontera que participa en una expedición de comercio de pieles en la década de 1820 lucha por sobrevivir después de ser mutilado por un oso y dado por muerto por los miembros de su propio equipo de caza.",
     trailer: "https://www.imdb.com/video/vi3857035801/?playlistId=tt1663202&ref_=tt_ov_vi",
-    type: "movie",
+    type: "movies",
     stock: 5,
     price: (1.8).toFixed(2),
   },
@@ -293,7 +296,7 @@ const array = [
     sinopsis:
       "La historia narra la súbita desaparición de un niño en esta ciudad durante la década de los 80, hecho que destapa los extraños sucesos que tienen lugar en la zona, producto de una serie de experimentos que realiza el gobierno. Además, en la ciudad aparecen fuerzas sobrenaturales inquietantes y una niña muy perturbadora.",
     trailer: "https://www.imdb.com/video/vi3269313049/?playlistId=tt4574334&ref_=tt_ov_vi",
-    type: "serie",
+    type: "series",
     stock: 5,
     price: (3.0).toFixed(2),
   },
@@ -309,7 +312,7 @@ const array = [
     sinopsis:
       "La implicación política en los asuntos de los Vengadores causa una ruptura entre Iron Man y el Capitán América.",
     trailer: "https://www.imdb.com/video/vi174044441/?playlistId=tt3498820&ref_=tt_pr_ov_vi",
-    type: "movie",
+    type: "movies",
     stock: 5,
     price: (2.5).toFixed(2),
   },
@@ -325,24 +328,25 @@ const array = [
     sinopsis:
       "En un futuro lejano, un pequeño robot recolector de residuos se embarca inadvertidamente en un viaje espacial que decidirá en última instancia el destino de la humanidad.",
     trailer: "https://www.imdb.com/video/vi2192703769/?playlistId=tt0910970&ref_=tt_ov_vi",
-    type: "movie",
+    type: "movies",
     stock: 5,
     price: (1.5).toFixed(2),
   },
 ];
 
-const is_OK = Math.random() > 0.5 ? true : false;
+const is_OK = Math.random() > 0.1 ? true : false;
 
-let apiPromise = new Promise((resolve, reject) => {
-  if (is_OK > 0.5) {
-    setTimeout(() => {
-      resolve(array);
-    }, 2000);
-  } else {
-    setTimeout(() => {
-      reject("UPS!, Error en el servidor...recargue la página para reintentar");
-    }, 4000);
-  }
-});
-
+const apiPromise = () => {
+  return new Promise((resolve, reject) => {
+    if (is_OK) {
+      setTimeout(() => {
+        resolve(array);
+      }, 2000);
+    } else {
+      setTimeout(() => {
+        reject("UPS!, Error en el servidor...recargue la página para reintentar");
+      }, 4000);
+    }
+  });
+};
 export default apiPromise;

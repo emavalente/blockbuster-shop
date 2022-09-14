@@ -1,4 +1,4 @@
-.counterContainer {
+.counter {
   width: 250px;
   margin: 0 auto;
   display: flex;
@@ -7,33 +7,38 @@
   justify-content: center;
 }
 
-.controlsContainer {
+.counter__controls {
   display: flex;
   align-items: center;
-  margin: 20px auto;
+  margin: 10px auto;
 }
 
-button {
-  width: 50px;
-  padding: 5px 15px;
-  background-color: rgb(218, 97, 157);
+.counter__controlsbtn {
+  padding: 3px 10px;
+  background-color: #4e4b4c;
   border: none;
-  border-radius: 50%;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-weight: 700;
-  font-size: 2em;
+  border-radius: 3px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1.2em;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 label {
-  background-color: antiquewhite;
-  padding: 5px 40px;
+  background-color: transparent;
+  background-color: #302d2d;
+  padding: 3px 30px;
   margin: 0 15px;
+  color: #fff;
+  font-size: 1.2em;
 }
 
-button.botonAgregar {
-  width: fit-content;
-  background-color: cadetblue;
-  border-radius: 0;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 1em;
+.counter__controlsbtn--agregar {
+  background-color: #1b1a1a;
+}
+
+.counter__controlsbtn--agregar:hover {
+  background-color: #4e4b4c;
 }
