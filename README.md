@@ -19,7 +19,7 @@ Se trata de un e-commerce que permite el alquiler de películas a elección perm
 Para clonar el repositorio utiliza: 
 
 ```
-git clone
+git clone https://github.com/emavalente/elvideoclu-shop
 ```
 Instalar dependencias:
 
