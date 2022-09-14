@@ -14,14 +14,14 @@ Se trata de un e-commerce que permite el alquiler de películas a elección perm
 - react-router-dom
 - react-spinner-overlay
 
-## Installation
+## Instalación
 
 Para clonar el repositorio utiliza: 
 
 ```
 git clone
 ```
-Intalar dependencias:
+Instalar dependencias:
 
 ```
 npm install
