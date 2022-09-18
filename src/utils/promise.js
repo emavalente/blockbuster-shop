@@ -58,7 +58,7 @@ const array = [
     director: "Jon Watts",
     sinopsis:
       "Peter Parker compagina su vida de estudiante ordinario de instituto en Queens con su alter ego de superhéroe, Spider-Man, y se encuentra tras la pista de una nueva amenaza que merodea por los cielos de Nueva York.",
-    triler: "https://www.imdb.com/video/vi4175083801/?playlistId=tt2250912&ref_=tt_ov_vi",
+    trailer: "https://www.imdb.com/video/vi4175083801/?playlistId=tt2250912&ref_=tt_ov_vi",
     type: "movies",
     stock: 5,
     price: (2.0).toFixed(2),
@@ -178,12 +178,13 @@ const array = [
     thumbnail: "https://i.postimg.cc/jjB8QpLJ/poster-22.jpg",
     title: "The Incredibles",
     genere: "Animacion",
-    time: "",
-    premiereDate: "",
-    stars: 7,
-    director: "Steven Spielberg",
-    sinopsis: "",
-    trailer: "",
+    time: "1h 55min",
+    premiereDate: "2004",
+    stars: 8.0,
+    director: "Brad Bird",
+    sinopsis:
+      "Una familia de superhéroes encubiertos, mientras intentan vivir la tranquila vida suburbana, se ven obligados a entrar en acción para salvar el mundo.",
+    trailer: "https://www.imdb.com/title/tt0317705/?ref_=ext_shr_lnk",
     type: "movies",
     stock: 5,
     price: (3.0).toFixed(2),
@@ -344,7 +345,7 @@ const apiPromise = () => {
       }, 2000);
     } else {
       setTimeout(() => {
-        reject("UPS!, Error en el servidor...recargue la página para reintentar");
+        reject("ERROR 404: UPS!, ERROR EN EL SERVIDOR, POR FAVOR ACTUALICE LA PAGINA");
       }, 4000);
     }
   });

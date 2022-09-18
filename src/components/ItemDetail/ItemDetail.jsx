@@ -1,10 +1,13 @@
 import React from "react";
-import ItemCount from '../ItemCount/ItemCount'
+import ItemCount from "../ItemCount/ItemCount";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./ItemDetail.css";
 
 function ItemDetail(props) {
+  const [inCart, setinCart] = useState(false);
 
-  const { thumbnail, title, genere, time, stars, premiereDate, director, sinopsis, trailer, stock, price} =
+  const { thumbnail, title, genere, time, stars, premiereDate, director, sinopsis, trailer, stock, price } =
     props.items;
 
   const backgroundStyled = {
@@ -14,18 +17,25 @@ function ItemDetail(props) {
     backgroundRepeat: "no-repeat",
   };
 
+  //Funcion de contador:
   const onAdd = (count) => {
     alert(`Agregaste ${count} items al carrito`);
-  }
+    setinCart(true);
+  };
 
   return (
     <div className="detail">
       <div className="detail__img">
         <img src={thumbnail} alt={`imagen de ${title}`}></img>
-        <div className="detail__stockPrice">
+        <div className="itemInfo">
           <h2>Precio: {price} US$</h2>
           <p>Stock: {stock}</p>
-          <ItemCount initValue= {0} stock={stock} onAdd={onAdd}/>
+          {/* Renderizado condicional */}
+          {inCart ? (
+            <p className="itemInfo__agregado">Pedido Agregado!</p>
+          ) : (
+            <ItemCount initValue={0} stock={stock} onAdd={onAdd} />
+          )}
         </div>
       </div>
       <div className="detail__description description" style={backgroundStyled}>
@@ -43,15 +53,20 @@ function ItemDetail(props) {
           </div>
           <div className="description__trailer">
             <p>
-              <a href={trailer} target="_blanck"><i className="far fa-play-circle"></i>ver trailer</a>
+              <a href={trailer} target="_blanck">
+                <i className="far fa-play-circle"></i>ver trailer
+              </a>
             </p>
           </div>
-          <h3 className="description__stars">
-            <p>
+          <div className="description__stars">
+            <Link to="/category/:idType" className="back">
+              Volver
+            </Link>
+            <h3>
               <i className="far fa-star"></i>
               {stars}/10
-            </p>
-          </h3>
+            </h3>
+          </div>
         </div>
       </div>
     </div>
