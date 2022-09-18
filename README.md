@@ -4,7 +4,7 @@
 
 ### _Desarrollado por Emanuel Valente_
 
-[![elvideoclu-video.gif](https://i.postimg.cc/3xSgh5ZQ/elvideoclu-video.gif)](https://postimg.cc/gxhwy75g)
+![elvideoclu-video.gif](./src/assets/img/elvideoclu_video.gif)
 
 Se trata de un e-commerce que permite el alquiler de películas a elección permitiendo al usuario navegar por las diferentes categorias de productos y además poder acceder a un detaller de estos, agregar cantidades y manipular un carrito de compras.
 
