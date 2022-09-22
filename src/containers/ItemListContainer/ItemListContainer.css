@@ -10,3 +10,11 @@
   align-items: flex-start;
   justify-content: center;
 }
+
+.loadingText {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1em;
+  color: #fff;
+  text-align: center;
+  margin-top: 20px;
+}

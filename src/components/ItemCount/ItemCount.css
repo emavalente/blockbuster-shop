@@ -14,14 +14,13 @@
 }
 
 .counter__controlsbtn {
-  padding: 3px 10px;
-  background-color: #4e4b4c;
-  border: none;
+  padding: 5px 10px;
+  background-color: #1b1a1a;
+  border: 1px solid #fa9eb5;
   border-radius: 3px;
-  text-align: center;
+  text-transform: uppercase;
   font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 1.2em;
+  font-size: 0.7rem;
   color: #ffffff;
   cursor: pointer;
 }
@@ -36,9 +35,20 @@ label {
 }
 
 .counter__controlsbtn--agregar {
-  background-color: #1b1a1a;
+  background-color: #4e4b4c;
 }
 
 .counter__controlsbtn--agregar:hover {
-  background-color: #4e4b4c;
+  background-color: #fa9eb5;
+  color: #1b1a1a;
+}
+
+button:not(.counter__controlsbtn--disabled):hover {
+  background-color: #fa9eb5;
+  color: #1b1a1a;
+}
+
+.counter__controlsbtn--agregar:disabled {
+  background-color: #1b1a1a;
+  color: #3a3838;
 }

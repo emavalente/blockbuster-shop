@@ -11,6 +11,7 @@
 
 .detail__img {
   width: 60%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,16 +25,32 @@
   margin-bottom: 10px;
 }
 
-.itemInfo {
+.detailActions {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.itemInfo__agregado {
+.detailActions h2,
+.detailActions p {
+  margin-bottom: 10px;
+}
+
+.detailActions__btn {
+  padding: 10px 10px;
+  background-color: #1b1a1a;
+  border: 1px solid #fa9eb5;
+  border-radius: 3px;
+  text-decoration: none;
   text-transform: uppercase;
-  font-size: 1.3em;
-  font-weight: 700;
+  font-size: 0.7rem;
   color: #fa9eb5;
-  margin: 23px 0;
+}
+
+.detailActions__btn:hover {
+  background-color: #fa9eb5;
+  color: #1b1a1a;
 }
 
 .detail__description {
@@ -87,16 +104,6 @@
 
 .description__stars h3 {
   margin-left: auto;
-}
-
-.description__stars .back {
-  border: 1px solid #fa9eb5;
-  border-radius: 3px;
-  padding: 0 10px;
-  font-size: 0.7em;
-  line-height: 32px;
-  color: #fa9eb5;
-  text-decoration: none;
 }
 
 .description__sinopsisTitle {

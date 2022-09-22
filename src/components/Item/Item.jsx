@@ -1,6 +1,6 @@
 import React from "react";
 import "./Item.css";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 function Item({ id, picture, title, genere, stars, price }) {
   return (
@@ -9,7 +9,9 @@ function Item({ id, picture, title, genere, stars, price }) {
         <button title="Ver Detalle">
           <img src={picture} alt={`imagen de ${title}`} />
           <div className="detalle">
-            <Link to={`/item/${id}`} className="btnDetalle">Ver Detalle</Link>
+            <Link to={`/item/${id}`} className="btnDetalle">
+              Ver Detalle
+            </Link>
           </div>
         </button>
       </div>

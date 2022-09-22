@@ -1,15 +1,21 @@
-import React from "react";
-import ItemCount from "../ItemCount/ItemCount";
-import { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import ItemCount from "../ItemCount/ItemCount";
+import { CartContext } from "../../context/CartContext";
 import "./ItemDetail.css";
 
-function ItemDetail(props) {
-  const [inCart, setinCart] = useState(false);
+function ItemDetail({ detail }) {
+  // llamo a la funcion addItem desde el contexto.
+  const { addItem } = useContext(CartContext);
 
-  const { thumbnail, title, genere, time, stars, premiereDate, director, sinopsis, trailer, stock, price } =
-    props.items;
+  // Estado que maneja el renderizado del boton agregar al carrito.
+  const [inCart, setInCart] = useState(false);
 
+  // Deserstructuro detail que viene por props.
+  const { thumbnail, title, genere, time, stars, premiereDate, director, sinopsis, trailer, stock, price, type } =
+    detail;
+
+  // Estilo en linea para el detail__description.
   const backgroundStyled = {
     backgroundImage: `url("${thumbnail}")`,
     backgroundPosition: "center",
@@ -17,24 +23,31 @@ function ItemDetail(props) {
     backgroundRepeat: "no-repeat",
   };
 
-  //Funcion de contador:
+  // Función que recibe una cantidad, setea el estado inCart, llama a addItem().
   const onAdd = (count) => {
-    alert(`Agregaste ${count} items al carrito`);
-    setinCart(true);
+    // Mensaje de productos agregados:
+    alert(`Agregaste ${count} items de ${title} al carrito`);
+    // Corroboro que se agregó el pedido.
+    setInCart(true);
+    // llamo a la función addItem() y le envio las el objeto detail y la cantidad que se agregó en count.
+    addItem(detail, count);
+    console.log("Log de ItemDetail:", detail);
   };
 
   return (
     <div className="detail">
       <div className="detail__img">
         <img src={thumbnail} alt={`imagen de ${title}`}></img>
-        <div className="itemInfo">
+        <div className="detailActions">
           <h2>Precio: {price} US$</h2>
           <p>Stock: {stock}</p>
-          {/* Renderizado condicional */}
+          {/* Renderizado condicional del Boton Agregar*/}
           {inCart ? (
-            <p className="itemInfo__agregado">Pedido Agregado!</p>
+            <Link to="/cart" className="detailActions__btn">
+              Ver en carrito
+            </Link>
           ) : (
-            <ItemCount initValue={0} stock={stock} onAdd={onAdd} />
+            <ItemCount stock={stock} onAdd={onAdd} />
           )}
         </div>
       </div>
@@ -59,7 +72,7 @@ function ItemDetail(props) {
             </p>
           </div>
           <div className="description__stars">
-            <Link to="/category/:idType" className="back">
+            <Link to={`/category/${type}`} className="detailActions__btn">
               Volver
             </Link>
             <h3>

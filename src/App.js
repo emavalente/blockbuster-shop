@@ -1,9 +1,10 @@
 import React from "react";
-import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import { MiProvider } from "./context/CartContext";
 import NavBar from "./components/NavBar/NavBar";
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
-import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import ItemListContainer from "./containers/ItemListContainer/ItemListContainer";
+import ItemDetailContainer from "./containers/ItemDetailContainer/ItemDetailContainer";
 import Cart from "./components/Cart/Cart";
 
 function App() {
@@ -11,14 +12,16 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<ItemListContainer />} />
-          <Route path="/category/:idType" element={<ItemListContainer />} />
-          <Route path="/item/:idItem" element={<ItemDetailContainer />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="*" element={<h2 className="errorMenssage">:( ERROR 404</h2>} />
-        </Routes>
+        <MiProvider>
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<ItemListContainer />} />
+            <Route path="/category/:idType" element={<ItemListContainer />} />
+            <Route path="/item/:idItem" element={<ItemDetailContainer />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="*" element={<h2 className="errorMenssage">:( LA PAGINA NO EXISTE</h2>} />
+          </Routes>
+        </MiProvider>
       </BrowserRouter>
     </div>
   );

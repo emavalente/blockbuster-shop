@@ -8,6 +8,16 @@
   padding: 10px;
   border-radius: 5px;
   font-family: "Roboto", sans-serif;
+  transition: all 400ms ease;
+}
+
+.itemCard:hover {
+  transform: translateY(-3%);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.8);
+}
+
+.itemCard:hover .itemCard__btn img {
+  outline: 2px solid #fa9eb5;
 }
 
 .itemCard__btn {
@@ -30,9 +40,9 @@
   cursor: pointer;
 }
 
-.itemCard__btn img:hover {
+/* .itemCard__btn img:hover {
   outline: 2px solid #fa9eb5;
-}
+} */
 
 .itemCard__btn:hover .detalle {
   opacity: 1;

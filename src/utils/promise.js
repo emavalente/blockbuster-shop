@@ -335,8 +335,10 @@ const array = [
   },
 ];
 
+// Valor random que maneja la situación de posible error de respuesta en servidor.
 const is_OK = Math.random() > 0.1 ? true : false;
 
+// Definición de promesa que devuelve el array de productos.
 const apiPromise = () => {
   return new Promise((resolve, reject) => {
     if (is_OK) {

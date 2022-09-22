@@ -1,13 +1,16 @@
-import React from "react";
+import { React, useContext } from "react";
 import { Link } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
 import "./CartWidget.css";
 
 function CartWidget() {
+  const { itemsCounter } = useContext(CartContext);
+
   return (
     <div className="cartButton">
       <Link to="/cart">
         <i className="cartButton__icon fas fa-shopping-cart">
-          <span className="cartButton__counter">10</span>
+          <span className="cartButton__counter">{itemsCounter()}</span>
         </i>
       </Link>
     </div>
