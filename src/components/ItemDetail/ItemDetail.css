@@ -1,6 +1,6 @@
 .detail {
   width: 40%;
-  height: 50vh;
+  height: 60vh;
   background-color: rgb(43, 40, 40);
   border-radius: 10px;
   display: flex;
@@ -198,7 +198,7 @@
 @media screen and (max-width: 1366px) and (min-height: 617px) {
   .detail {
     width: 70%;
-    height: 70vh;
+    height: 80vh;
     justify-content: space-between;
     font-size: 0.7rem;
   }

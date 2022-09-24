@@ -3,6 +3,7 @@ import "./Item.css";
 import { Link } from "react-router-dom";
 
 function Item({ id, picture, title, genere, stars, price }) {
+  console.log(price);
   return (
     <div className="itemCard">
       <div className="itemCard__btn">
@@ -27,7 +28,7 @@ function Item({ id, picture, title, genere, stars, price }) {
         </p>
       </div>
       <div className="itemCard__precio">
-        <h3>Precio: ${price}</h3>
+        <h3>{`Precio: US$${price.toFixed(2)}`}</h3>
       </div>
     </div>
   );

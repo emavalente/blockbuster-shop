@@ -1,68 +1,83 @@
 import React from "react";
-import "./ItemListContainer.css";
-import ItemList from "../../components/ItemList/ItemList";
-import apiPromise from "../../utils/promise";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+
+// Importaciones para Promesa Firestore
+import { getFilms } from "../../utils/promise";
+
+import { CircleSpinnerOverlay } from "react-spinner-overlay";
+import ItemList from "../../components/ItemList/ItemList";
+import "./ItemListContainer.css";
 
 function ItemListContainer() {
   // SetState Hook
   const [movies, setMovies] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   // useParams Hook
   const { idType } = useParams();
 
-  //componentDidMount del useEffect Hook. donde un componente necesita hacer algo al montarse es donde se define useEffect.
+  // componentDidMount del useEffect Hook. donde un componente necesita hacer algo al montarse es donde se define useEffect.
   useEffect(() => {
     switch (idType) {
       case "movies":
-        apiPromise()
-          .then((res) => {
-            setMovies(res.filter((item) => item.type === idType));
-          })
-          .catch((err) => {
-            alert(err);
-          });
+        (async () => {
+          try {
+            const respuesta = await getFilms();
+            setMovies(respuesta.filter((item) => item.type === idType));
+            setLoading(false);
+          } catch (error) {
+            console.log(error);
+          }
+        })();
         break;
 
       case "series":
-        apiPromise()
-          .then((res) => {
-            setMovies(res.filter((item) => item.type === idType));
-          })
-          .catch((err) => {
-            alert(err);
-          });
+        (async () => {
+          try {
+            const respuesta = await getFilms();
+            setMovies(respuesta.filter((item) => item.type === idType));
+            setLoading(false);
+          } catch (error) {
+            console.log(error);
+          }
+        })();
         break;
 
       case "anime":
-        apiPromise()
-          .then((res) => {
-            setMovies(res.filter((item) => item.type === idType));
-          })
-          .catch((err) => {
-            alert(err);
-          });
+        (async () => {
+          try {
+            const respuesta = await getFilms();
+            setMovies(respuesta.filter((item) => item.type === idType));
+            setLoading(false);
+          } catch (error) {
+            console.log(error);
+          }
+        })();
         break;
 
       case "estrenos":
-        apiPromise()
-          .then((res) => {
-            setMovies(res.filter((item) => item.premiereDate > 2017));
-          })
-          .catch((err) => {
-            alert(err);
-          });
+        (async () => {
+          try {
+            const respuesta = await getFilms();
+            setMovies(respuesta.filter((item) => item.premiereDate > 2017));
+            setLoading(false);
+          } catch (error) {
+            console.log(error);
+          }
+        })();
         break;
 
       default:
-        apiPromise()
-          .then((res) => {
-            setMovies(res);
-          })
-          .catch((err) => {
-            alert(err);
-          });
+        (async () => {
+          try {
+            const respuesta = await getFilms();
+            setMovies(respuesta);
+            setLoading(false);
+          } catch (error) {
+            console.log(error);
+          }
+        })();
     }
   }, [idType]);
 
@@ -71,8 +86,17 @@ function ItemListContainer() {
   return (
     <div className="main">
       {/* Envio el state por props */}
-      {movies ? <ItemList items={movies} /> : null}
-      {/* aqui se hace un render condicional ya que si movies no tiene valor afecta a ItemList el cual recibiría undefined */}
+      {loading ? (
+        <CircleSpinnerOverlay
+          loading={loading}
+          size={42}
+          color="rgb(255 158 181)"
+          overlayColor="rgb(255 158 181 / 0%)"
+          message={<p className="loadingText">ESPERANDO DATOS...</p>}
+        />
+      ) : (
+        <ItemList items={movies} />
+      )}
     </div>
   );
 }

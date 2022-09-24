@@ -1,7 +1,10 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import apiPromise from "../../utils/promise";
+
+// Importaciones para Promesa Firestore
+import { getFilms } from "../../utils/promise";
+
 import ItemDetail from "../../components/ItemDetail/ItemDetail";
 import { CircleSpinnerOverlay } from "react-spinner-overlay";
 import "./ItemDetailContainer.css";
@@ -15,18 +18,18 @@ function ItemDetailContainer() {
   //componentDidMount del useEffect Hook. donde un componente necesita hacer algo al montarse es donde se define useEffect.
   useEffect(() => {
     // Manejo la respuesta seteando el state con su valor.
-    if (idItem) {
-      apiPromise()
-        .then((res) => {
-          setMovies(res.find((item) => item.id === parseInt(idItem)));
-          setLoading(false);
-        })
-        .catch((err) => {
-          alert(err);
-        });
-    }
+    (async () => {
+      try {
+        const respuesta = await getFilms();
+        setMovies(respuesta.find((item) => item.id === idItem));
+        setLoading(false);
+      } catch (error) {
+        console.log(error);
+      }
+    })();
   }, [idItem]);
   // useEffect posee una dependencia de renderizado que es el valor de useParams
+
   return (
     <div className="detailContainer">
       {loading ? (
