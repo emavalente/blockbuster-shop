@@ -45,6 +45,10 @@ td img {
   min-width: 60px;
 }
 
+.carTable__th--caratula {
+  width: 250px;
+}
+
 .cartTable__remove {
   border: none;
   background-color: transparent;

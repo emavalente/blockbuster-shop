@@ -10,7 +10,7 @@ function CartWidget() {
     <div className="cartButton">
       <Link to="/cart">
         <i className="cartButton__icon fas fa-shopping-cart">
-          <span className="cartButton__counter">{itemsCounter()}</span>
+          {itemsCounter() > 0 ? <span className="cartButton__counter">{itemsCounter()}</span> : null}
         </i>
       </Link>
     </div>

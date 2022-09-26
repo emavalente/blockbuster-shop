@@ -31,7 +31,6 @@ function ItemDetail({ detail }) {
     setInCart(true);
     // llamo a la función addItem() y le envio las el objeto detail y la cantidad que se agregó en count.
     addItem(detail, count);
-    console.log("Log de ItemDetail:", detail);
   };
 
   return (
@@ -39,7 +38,7 @@ function ItemDetail({ detail }) {
       <div className="detail__img">
         <img src={thumbnail} alt={`imagen de ${title}`}></img>
         <div className="detailActions">
-          <h2>Precio: {price} US$</h2>
+          <h2>{`Precio: US$ ${price.toFixed(2)}`}</h2>
           <p>Stock: {stock}</p>
           {/* Renderizado condicional del Boton Agregar*/}
           {inCart ? (

@@ -43,7 +43,7 @@ label {
   color: #1b1a1a;
 }
 
-button:not(.counter__controlsbtn--disabled):hover {
+button.counter__controlsbtn--agregar:not(.counter__controlsbtn--disabled):hover {
   background-color: #fa9eb5;
   color: #1b1a1a;
 }

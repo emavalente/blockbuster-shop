@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 import "./Cart.css";
 
@@ -12,7 +13,7 @@ function Cart() {
       <table className="carTable">
         <tbody>
           <tr>
-            <th>Caratula</th>
+            <th className="carTable__th--caratula">Caratula</th>
             <th>Título</th>
             <th>Cantidad</th>
             <th>SubTotal</th>
@@ -27,7 +28,7 @@ function Cart() {
                   </td>
                   <td>{item.title}</td>
                   <td>{item.count}</td>
-                  <td>{`$${(item.price * item.count).toFixed(2)}`}</td>
+                  <td>{`US$ ${(item.price * item.count).toFixed(2)}`}</td>
                   <td>
                     <button
                       className="cartTable__remove"
@@ -43,7 +44,7 @@ function Cart() {
             })
           ) : (
             <tr>
-              <td colSpan={4} className="carritoVacio__message">
+              <td colSpan={5} className="carritoVacio__message">
                 ¡Carrito Vacío!
               </td>
             </tr>
@@ -51,10 +52,13 @@ function Cart() {
         </tbody>
         <tfoot>
           <tr>
-            <td>
-              <button>Continuar Compra</button>
+            <td colSpan={3}>
+              <Link to="/" className="detailActions__btn">
+                Continuar Compra
+              </Link>
+              {itemsAdded.length > 0 ? <button className="detailActions__btn">Terminar Compra</button> : null}
             </td>
-            <td colSpan={3}>Valor Total: ${purchaseValue()}</td>
+            <td colSpan={2}>{`Valor Total: US$ ${purchaseValue().toFixed(2)}`}</td>
           </tr>
         </tfoot>
       </table>

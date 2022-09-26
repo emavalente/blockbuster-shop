@@ -39,6 +39,7 @@
 
 .detailActions__btn {
   padding: 10px 10px;
+  margin-left: 15px;
   background-color: #1b1a1a;
   border: 1px solid #fa9eb5;
   border-radius: 3px;
@@ -51,6 +52,7 @@
 .detailActions__btn:hover {
   background-color: #fa9eb5;
   color: #1b1a1a;
+  cursor: pointer;
 }
 
 .detail__description {
@@ -122,6 +124,7 @@
 .description__trailer {
   width: 25%;
   padding: 3px;
+  background-color: #1b1a1a;
   border: 1px solid rgb(241, 152, 228);
   border-radius: 3px;
   text-align: center;
