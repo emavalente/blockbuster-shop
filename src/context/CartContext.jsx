@@ -1,4 +1,5 @@
 import { React, createContext, useState } from "react";
+import { toast } from "react-toastify";
 
 export const CartContext = createContext();
 
@@ -7,7 +8,7 @@ export const MiProvider = ({ children }) => {
   const [itemsAdded, setItemsAdded] = useState([]);
 
   // ? Función para agregar un item al carrito
-  const addItem = (item, count) => {
+  const addItem = (item, count, title) => {
     // armo un objeto nuevo donde junto las propiedades del item y le agrego la propiedad count.
     const armedItem = { ...item, count };
 
@@ -18,8 +19,10 @@ export const MiProvider = ({ children }) => {
       const newArray = itemsAdded.filter((item) => item.id !== armedItem.id);
       newArray.push({ ...item, count: (armedItem.count += count) });
       setItemsAdded(newArray);
+      mensaje(`Se actualizó tu Film ${title}`);
     } else {
       setItemsAdded([...itemsAdded, armedItem]);
+      mensaje(`Se agregaron al carrito: ${count} cantidades de ${title} `);
     }
   };
 
@@ -45,6 +48,7 @@ export const MiProvider = ({ children }) => {
   const cartCleaner = () => {
     // Borra todo el array
     setItemsAdded([]);
+    mensaje("El carrito se ha vaciado correctamente!.");
   };
 
   // ? Función para verificar si un item en particular se encuentra en el carrito.
@@ -53,8 +57,23 @@ export const MiProvider = ({ children }) => {
     return itemsAdded.some((item) => item.id === id);
   };
 
+  // ? Función mensaje para React Tostify.
+  const mensaje = (mensaje) => {
+    toast(mensaje, {
+      position: "top-center",
+      autoClose: 1800,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  };
+
   return (
-    <CartContext.Provider value={{ addItem, removeItem, cartCleaner, itemsAdded, itemsCounter, purchaseValue }}>
+    <CartContext.Provider
+      value={{ addItem, removeItem, cartCleaner, itemsAdded, itemsCounter, purchaseValue, mensaje }}
+    >
       {children}
     </CartContext.Provider>
   );

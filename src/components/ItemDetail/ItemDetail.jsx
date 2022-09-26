@@ -25,12 +25,10 @@ function ItemDetail({ detail }) {
 
   // Función que recibe una cantidad, setea el estado inCart, llama a addItem().
   const onAdd = (count) => {
-    // Mensaje de productos agregados:
-    alert(`Agregaste ${count} items de ${title} al carrito`);
     // Corroboro que se agregó el pedido.
     setInCart(true);
     // llamo a la función addItem() y le envio las el objeto detail y la cantidad que se agregó en count.
-    addItem(detail, count);
+    addItem(detail, count, title);
   };
 
   return (

@@ -4,7 +4,7 @@ import { CartContext } from "../../context/CartContext";
 import "./Cart.css";
 
 function Cart() {
-  const { itemsAdded, removeItem, purchaseValue } = useContext(CartContext);
+  const { itemsAdded, removeItem, cartCleaner, purchaseValue } = useContext(CartContext);
 
   return (
     <div className="cartContainer">
@@ -53,6 +53,11 @@ function Cart() {
         <tfoot>
           <tr>
             <td colSpan={3}>
+              {itemsAdded.length > 1 ? (
+                <button className="detailActions__btn" onClick={cartCleaner}>
+                  Limpiar Carrito
+                </button>
+              ) : null}
               <Link to="/" className="detailActions__btn">
                 Continuar Compra
               </Link>
