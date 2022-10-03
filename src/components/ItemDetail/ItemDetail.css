@@ -1,11 +1,10 @@
 .detail {
-  width: 40%;
+  width: 50%;
   height: 60vh;
   background-color: rgb(43, 40, 40);
   border-radius: 10px;
   display: flex;
   box-shadow: 0px 0px 20px #fa9eb5;
-  font-family: "Roboto", sans-serif;
   font-size: 0.7rem;
 }
 
@@ -39,7 +38,6 @@
 
 .detailActions__btn {
   padding: 10px 10px;
-  margin-left: 15px;
   background-color: #1b1a1a;
   border: 1px solid #fa9eb5;
   border-radius: 3px;
@@ -70,7 +68,7 @@
 
 .description__title {
   margin-bottom: 5px;
-  font-family: "Secular One", sans-serif;
+  font-family: "Figtree", sans-serif;
   font-size: 25px;
   color: #fa9eb5;
   border-bottom: 1px solid #fa9eb5;
@@ -200,8 +198,8 @@
 
 @media screen and (max-width: 1366px) and (min-height: 617px) {
   .detail {
-    width: 70%;
-    height: 80vh;
+    width: 65%;
+    height: 75vh;
     justify-content: space-between;
     font-size: 0.7rem;
   }

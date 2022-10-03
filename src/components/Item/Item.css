@@ -1,13 +1,12 @@
 .itemCard {
   width: 210px;
-  height: 460px;
+  height: 440px;
   display: flex;
   flex-direction: column;
   background-color: #141414;
   margin: 10px;
   padding: 10px;
   border-radius: 5px;
-  font-family: "Roboto", sans-serif;
   transition: all 400ms ease;
 }
 
@@ -40,10 +39,6 @@
   cursor: pointer;
 }
 
-/* .itemCard__btn img:hover {
-  outline: 2px solid #fa9eb5;
-} */
-
 .itemCard__btn:hover .detalle {
   opacity: 1;
   visibility: visible;
@@ -70,11 +65,12 @@
 
 .btnDetalle {
   text-decoration: none;
+  font-family: "Figtree", sans-serif;
   color: #fa9eb5;
 }
 
 .itemCard__title h3 {
-  font-family: "Secular One", sans-serif;
+  font-family: "Figtree", sans-serif;
   font-size: 0.8em;
   color: #fa9eb5;
 }

@@ -9,7 +9,7 @@ function ItemCount({ stock, onAdd }) {
   };
 
   const restarItem = () => {
-    count > 1 ? setCount(count - 1) : alert("Agrega al menos 1 producto!");
+    count <= stock && count > 1 ? setCount(count - 1) : alert("Agrega al menos 1 producto!");
   };
 
   const isDisabled = () => {
@@ -19,6 +19,7 @@ function ItemCount({ stock, onAdd }) {
 
   return (
     <div className="counter">
+      <p>Stock: {stock}</p>
       <div className="counter__controls">
         <button className="counter__controlsbtn" onClick={restarItem}>
           -

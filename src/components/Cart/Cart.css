@@ -15,17 +15,17 @@ hr {
 
 .cartContainer h2,
 th {
-  font-family: "Secular One", sans-serif;
+  font-family: "Figtree", sans-serif;
   color: #fa9eb5;
 }
 
-.carTable {
-  width: 80%;
+.cartTable {
+  width: 95%;
   max-width: 900px;
   margin-bottom: 50px;
 }
 
-.carTable,
+.cartTable,
 tfoot,
 tr {
   /* border: 1px solid #fa9eb5; */
@@ -35,17 +35,17 @@ tr {
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.8);
 }
 
-td {
+.cartTable td {
   font-family: "Roboto", sans-serif;
   padding: 20px;
 }
 
-td img {
+.cartTable td img {
   width: 30%;
   min-width: 60px;
 }
 
-.carTable__th--caratula {
+.cartTable__th--caratula {
   width: 250px;
 }
 
@@ -59,8 +59,21 @@ td img {
 
 .carritoVacio__message {
   padding: 30px 30px;
-  font-family: "Secular One", sans-serif;
+  font-family: "Figtree", sans-serif;
   font-size: 2em;
   color: #f3e300;
   text-shadow: 5px 5px 20px rgba(0, 0, 0, 0.8);
+}
+
+.cartControls {
+  display: flex;
+  gap: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .cartContainer h2,
+  th,
+  td {
+    font-size: 0.8em;
+  }
 }

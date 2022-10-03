@@ -1,30 +1,29 @@
-import "./NavBar.css";
+import React from "react";
+import { Link } from "react-router-dom";
 import branch from "../../assets/img/branch.png";
+import NavLinks from "./NavLinks";
 import CartWidget from "../CartWidget/CartWidget";
-import {Link} from 'react-router-dom'
+
+import { toggle } from "./hamburger-script";
+import "./NavBar.css";
 
 function NavBar() {
   return (
-    <nav className="navBar">
-      <div className="navBar__container">
-      <Link to='/'> <img src={branch} alt="logo"></img></Link>
-        <ul className="navBar__menu">
-          <li>
-            <Link to='/category/movies'>Peliculas</Link>
-          </li>
-          <li>
-          <Link to='/category/series'>Series</Link>
-          </li>
-          <li>
-          <Link to='/category/anime'>Anime</Link>
-          </li>
-          <li>
-          <Link to='/category/estrenos'>Estrenos</Link>
-          </li>
-        </ul>
+    <div className="navBar__container">
+      <nav className="navBar">
+        <div id="hamburger" className="hamburger" onClick={toggle}>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </div>
+        <Link to="/">
+          {" "}
+          <img src={branch} alt="logo"></img>
+        </Link>
+        <NavLinks />
         <CartWidget />
-      </div>
-    </nav>
+      </nav>
+    </div>
   );
 }
 

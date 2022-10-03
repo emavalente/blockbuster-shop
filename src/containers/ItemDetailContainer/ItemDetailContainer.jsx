@@ -27,7 +27,7 @@ function ItemDetailContainer() {
         console.log(error);
       }
     })();
-  }, [idItem]);
+  }, []);
   // useEffect posee una dependencia de renderizado que es el valor de useParams
 
   return (

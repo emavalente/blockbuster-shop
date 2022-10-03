@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
 import { CartContext } from "../../context/CartContext";
@@ -6,12 +6,12 @@ import "./ItemDetail.css";
 
 function ItemDetail({ detail }) {
   // llamo a la funcion addItem desde el contexto.
-  const { addItem } = useContext(CartContext);
+  const { addItem, toCart, setToCart } = useContext(CartContext);
 
   // Estado que maneja el renderizado del boton agregar al carrito.
-  const [inCart, setInCart] = useState(false);
+  // const [inCart, setInCart] = useState(false);
 
-  // Deserstructuro detail que viene por props.
+  // Desestructuro detail que viene por props.
   const { thumbnail, title, genere, time, stars, premiereDate, director, sinopsis, trailer, stock, price, type } =
     detail;
 
@@ -23,13 +23,13 @@ function ItemDetail({ detail }) {
     backgroundRepeat: "no-repeat",
   };
 
-  // Función que recibe una cantidad, setea el estado inCart, llama a addItem().
+  // Función que recibe una cantidad, llama a addItem() y setea el estado toCart en el context.
   const onAdd = (count) => {
-    // Corroboro que se agregó el pedido.
-    setInCart(true);
-    // llamo a la función addItem() y le envio las el objeto detail y la cantidad que se agregó en count.
     addItem(detail, count, title);
   };
+  useEffect(() => {
+    setToCart(false);
+  }, []);
 
   return (
     <div className="detail">
@@ -37,9 +37,8 @@ function ItemDetail({ detail }) {
         <img src={thumbnail} alt={`imagen de ${title}`}></img>
         <div className="detailActions">
           <h2>{`Precio: US$ ${price.toFixed(2)}`}</h2>
-          <p>Stock: {stock}</p>
           {/* Renderizado condicional del Boton Agregar*/}
-          {inCart ? (
+          {toCart ? (
             <Link to="/cart" className="detailActions__btn">
               Ver en carrito
             </Link>

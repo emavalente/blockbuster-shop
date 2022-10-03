@@ -25,7 +25,7 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="*" element={<h2 className="errorMenssage">:( LA PAGINA NO EXISTE</h2>} />
           </Routes>
-          <ToastContainer />
+          <ToastContainer theme="dark" />
         </MiProvider>
       </BrowserRouter>
     </div>

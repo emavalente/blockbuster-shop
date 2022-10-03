@@ -17,7 +17,7 @@ function ItemListContainer() {
   // useParams Hook
   const { idType } = useParams();
 
-  // componentDidMount del useEffect Hook. donde un componente necesita hacer algo al montarse es donde se define useEffect.
+  // componentDidUpdate del useEffect Hook. donde un componente necesita hacer algo al actualizarse la dependencia.
   useEffect(() => {
     switch (idType) {
       case "movies":
