@@ -14,7 +14,7 @@ hr {
 }
 
 .cartContainer h2,
-th {
+.cartContainer th {
   font-family: "Figtree", sans-serif;
   color: #fa9eb5;
 }
@@ -23,37 +23,38 @@ th {
   width: 95%;
   max-width: 900px;
   margin-bottom: 50px;
+  border-collapse: collapse;
+  color: #c23466;
+  font-weight: 700;
 }
 
-.cartTable,
-tfoot,
-tr {
+.cartTable {
   /* border: 1px solid #fa9eb5; */
   border-radius: 5px;
-  text-align: center;
-  color: #fff;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.8);
+  text-align: center;
 }
 
 .cartTable td {
-  font-family: "Roboto", sans-serif;
   padding: 20px;
+  background-color: rgb(255, 242, 242);
 }
 
-.cartTable td img {
+.cartTable img {
   width: 30%;
   min-width: 60px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
 }
 
 .cartTable__th--caratula {
-  width: 250px;
+  width: 190px;
 }
 
 .cartTable__remove {
   border: none;
   background-color: transparent;
-  font-size: 2em;
-  color: #fff;
+  font-size: 1.6em;
+  color: #680829;
   cursor: pointer;
 }
 
@@ -61,7 +62,7 @@ tr {
   padding: 30px 30px;
   font-family: "Figtree", sans-serif;
   font-size: 2em;
-  color: #f3e300;
+  color: #680829;
   text-shadow: 5px 5px 20px rgba(0, 0, 0, 0.8);
 }
 

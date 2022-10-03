@@ -1,8 +1,14 @@
 .cardContainer {
+  display: grid;
   width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-start;
+  height: 100%;
+  gap: 1rem;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+}
+
+@media screen and (max-width: 425px) {
+  .cardContainer {
+    width: 60%;
+  }
 }

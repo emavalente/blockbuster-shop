@@ -43,7 +43,7 @@ function Cart() {
       <h2>Compra actual</h2>
       <hr />
       <table className="cartTable">
-        <tbody>
+        <thead>
           <tr>
             <th className="cartTable__th--caratula">Caratula</th>
             <th>Título</th>
@@ -51,6 +51,8 @@ function Cart() {
             <th>SubTotal</th>
             <th></th>
           </tr>
+        </thead>
+        <tbody>
           {itemsAdded.length > 0 ? (
             itemsAdded.map((item) => {
               return (
@@ -68,7 +70,7 @@ function Cart() {
                         removeItem(item.id);
                       }}
                     >
-                      <i className="fas fa-minus-circle"></i>
+                      <i className="far fa-trash-alt"></i>
                     </button>
                   </td>
                 </tr>
@@ -84,8 +86,7 @@ function Cart() {
         </tbody>
         <tfoot>
           <tr>
-            <td colSpan={3}></td>
-            <td colSpan={2}>{`Valor Total: US$ ${purchaseValue().toFixed(2)}`}</td>
+            <td colSpan={5}>{`Valor Total: US$ ${purchaseValue().toFixed(2)}`}</td>
           </tr>
         </tfoot>
       </table>

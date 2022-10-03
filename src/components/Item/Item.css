@@ -1,12 +1,10 @@
 .itemCard {
-  width: 210px;
-  height: 440px;
   display: flex;
   flex-direction: column;
   background-color: #141414;
-  margin: 10px;
   padding: 10px;
   border-radius: 5px;
+  position: relative;
   transition: all 400ms ease;
 }
 
@@ -17,6 +15,25 @@
 
 .itemCard:hover .itemCard__btn img {
   outline: 2px solid #fa9eb5;
+}
+
+.itemCard:hover .itemCard__info {
+  opacity: 1;
+  visibility: visible;
+  top: 68%;
+  transition: all 0.5s ease-in-out;
+}
+
+.itemCard__info {
+  height: 100px;
+  padding: 5px;
+  position: absolute;
+  top: 80%;
+  left: 0;
+  width: 100%;
+  background-color: rgb(20, 20, 20, 0.8);
+  opacity: 0;
+  visibility: hidden;
 }
 
 .itemCard__btn {
@@ -34,8 +51,8 @@
 }
 
 .itemCard__btn img {
-  width: 200px;
-  height: 296px;
+  width: 100%;
+  max-height: 300.19px;
   cursor: pointer;
 }
 
@@ -69,7 +86,7 @@
   color: #fa9eb5;
 }
 
-.itemCard__title h3 {
+.itemCard__title {
   font-family: "Figtree", sans-serif;
   font-size: 0.8em;
   color: #fa9eb5;
@@ -81,18 +98,15 @@
   font-size: 0.8em;
 }
 
-.itemCard__description p i {
+.itemCard__description i {
   margin-right: 5px;
   color: yellow;
 }
 
 .itemCard__precio {
   color: antiquewhite;
-  font-size: 0.9em;
+  font-size: 0.8em;
   display: flex;
   justify-content: flex-end;
-}
-
-.itemCard__precio h3 {
   align-self: flex-end;
 }
