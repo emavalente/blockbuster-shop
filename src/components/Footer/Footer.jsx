@@ -15,17 +15,17 @@ function Footer() {
           <ul className="footer__socials">
             <li>
               <a href="https://www.linkedin.com/in/emanuel-valente/">
-                <i title="emavalente.dev@gmail.com" class="fas fa-paper-plane"></i>
+                <i title="emavalente.dev@gmail.com" className="fas fa-paper-plane"></i>
               </a>
             </li>
             <li>
               <a href="https://github.com/emavalente">
-                <i title="Github" class="fab fa-github"></i>
+                <i title="Github" className="fab fa-github"></i>
               </a>
             </li>
             <li>
               <a href="https://www.linkedin.com/in/emanuel-valente/">
-                <i title="LinkedIn" class="fab fa-linkedin" />
+                <i title="LinkedIn" className="fab fa-linkedin" />
               </a>
             </li>
           </ul>

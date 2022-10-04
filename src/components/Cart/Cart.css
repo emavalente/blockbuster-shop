@@ -1,6 +1,6 @@
 .cartContainer {
   width: 100%;
-  min-height: 100vh;
+  min-height: auto;
   padding-top: 150px;
   display: flex;
   flex-direction: column;

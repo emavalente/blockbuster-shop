@@ -7,11 +7,12 @@
   color: #fa9eb5;
   position: relative;
   cursor: pointer;
+  transition: all 0.3s;
 }
 
 .cartButton__icon:hover {
-  text-shadow: 0 0 10px #f7c7d3;
-  transition: all 0.3s;
+  text-shadow: 0 0 10px #418cfd;
+  transform: rotate(15deg);
 }
 
 .cartButton__counter {

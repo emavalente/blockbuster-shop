@@ -1,6 +1,8 @@
 footer {
   width: 100%;
   background-color: rgb(27, 26, 26, 0.8);
+  position: absolute;
+  bottom: 0;
 }
 
 .footer {
@@ -56,7 +58,7 @@ footer .link {
 
 .footer h1,
 i {
-  font-size: 1.5em;
+  font-size: 1em;
   color: #fa9eb5;
 }
 
