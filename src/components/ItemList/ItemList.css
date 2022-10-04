@@ -10,6 +10,10 @@
 
 @media screen and (max-width: 425px) {
   .cardContainer {
-    width: 60%;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    justify-items: center;
   }
 }

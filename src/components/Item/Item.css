@@ -110,3 +110,9 @@
   justify-content: flex-end;
   align-self: flex-end;
 }
+
+@media screen and (max-width: 430px) {
+  .itemCard {
+    width: 150px;
+  }
+}
