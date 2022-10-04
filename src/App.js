@@ -10,6 +10,7 @@ import ItemListContainer from "./containers/ItemListContainer/ItemListContainer"
 import ItemDetailContainer from "./containers/ItemDetailContainer/ItemDetailContainer";
 import Cart from "./components/Cart/Cart";
 import "./App.css";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   // Zona de Logica
@@ -27,6 +28,7 @@ function App() {
           </Routes>
           <ToastContainer theme="dark" />
         </MiProvider>
+        <Footer />
       </BrowserRouter>
     </div>
   );

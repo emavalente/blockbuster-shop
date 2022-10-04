@@ -8,9 +8,6 @@ function ItemDetail({ detail }) {
   // llamo a la funcion addItem desde el contexto.
   const { addItem, toCart, setToCart } = useContext(CartContext);
 
-  // Estado que maneja el renderizado del boton agregar al carrito.
-  // const [inCart, setInCart] = useState(false);
-
   // Desestructuro detail que viene por props.
   const { thumbnail, title, genere, time, stars, premiereDate, director, sinopsis, trailer, stock, price, type } =
     detail;

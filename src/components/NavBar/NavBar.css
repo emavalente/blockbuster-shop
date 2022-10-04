@@ -1,6 +1,5 @@
 .navBar__container {
   width: 100%;
-  margin-bottom: 60px;
   position: fixed;
   z-index: 99;
   background-color: #000000;

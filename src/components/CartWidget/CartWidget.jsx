@@ -7,7 +7,7 @@ function CartWidget() {
   const { itemsCounter } = useContext(CartContext);
 
   return (
-    <div className="cartButton">
+    <div className="cartButton" title="Abrir Carrito">
       <Link to="/cart">
         <i className="cartButton__icon fas fa-shopping-cart">
           {itemsCounter() > 0 ? <span className="cartButton__counter">{itemsCounter()}</span> : null}

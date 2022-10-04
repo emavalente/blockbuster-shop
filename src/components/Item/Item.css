@@ -28,7 +28,7 @@
   height: 100px;
   padding: 5px;
   position: absolute;
-  top: 80%;
+  top: 70%;
   left: 0;
   width: 100%;
   background-color: rgb(20, 20, 20, 0.8);
@@ -56,12 +56,12 @@
   cursor: pointer;
 }
 
-.itemCard__btn:hover .detalle {
+.itemCard__btn:hover .detail {
   opacity: 1;
   visibility: visible;
 }
 
-.itemCard .detalle {
+.itemCard .detail {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -80,7 +80,7 @@
   transition: visibility 0.5s, opacity 0.5s;
 }
 
-.btnDetalle {
+.btnDetail {
   text-decoration: none;
   font-family: "Figtree", sans-serif;
   color: #fa9eb5;
@@ -103,7 +103,7 @@
   color: yellow;
 }
 
-.itemCard__precio {
+.itemCard__price {
   color: antiquewhite;
   font-size: 0.8em;
   display: flex;

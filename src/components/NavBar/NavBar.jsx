@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import branch from "../../assets/img/branch.png";
 import NavLinks from "./NavLinks";
 import CartWidget from "../CartWidget/CartWidget";
-
 import { toggle } from "./hamburger-script";
 import "./NavBar.css";
 

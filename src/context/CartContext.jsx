@@ -5,13 +5,12 @@ import "react-toastify/dist/ReactToastify.css";
 export const CartContext = createContext();
 
 export const MiProvider = ({ children }) => {
-  //itemsAdded: Estado que guarda un array con los items agregados al carrito.
+  // Estado que guarda un array con los items agregados al carrito.
   const [itemsAdded, setItemsAdded] = useState([]);
 
   // Estado que maneja el renderizado del boton agregar al carrito en ItemDetail.
   const [toCart, setToCart] = useState(false);
 
-  // ? Función para agregar un item al carrito
   const addItem = (item, count, title) => {
     // armo un objeto nuevo con las propiedades del item y le agrego la propiedad count.
     const armedItem = { ...item, count };
@@ -28,51 +27,45 @@ export const MiProvider = ({ children }) => {
         newArray.push(newItem);
         setItemsAdded(newArray);
         setToCart(true);
-        mensaje(`Se actualizó tu Film ${title}`);
+        message(`Se actualizó tu Film ${title}`);
       } else {
-        alerta("Esta cantidad supera el stock, por favor reducela");
+        alertMessage("Esta cantidad supera el stock, por favor reducela");
       }
     } else {
       setItemsAdded([...itemsAdded, armedItem]);
-      mensaje(`Se agregaron al carrito: ${count} cantidades de ${title} `);
+      message(`Se agregaron al carrito: ${count} cantidades de ${title} `);
       setToCart(true);
     }
   };
 
-  // ? Función sumar cantidades.
   const itemsCounter = () => {
     let qtys = itemsAdded.map((item) => item.count);
     return qtys.reduce((previousValue, currentValue) => previousValue + currentValue, 0);
   };
 
-  // ? Función para calcular total de la compra.
   const purchaseValue = () => {
     let totals = itemsAdded.map((item) => item.count * item.price);
     return totals.reduce((previousValue, currentValue) => previousValue + currentValue, 0);
   };
 
-  // ? Función para remover un item del carrito.
   const removeItem = (id) => {
     // Devuelve todos los elementos menos el que coincida con la condición y setea el nuevo array.
     setItemsAdded(itemsAdded.filter((item) => item.id !== id));
   };
 
-  // ? Función para limpiar el carrito.
   const cartCleaner = () => {
     // Borra todo el array
     setItemsAdded([]);
-    mensaje("El carrito se ha vaciado correctamente!.");
+    message("El carrito se ha vaciado correctamente!.");
   };
 
-  // ? Función para verificar si un item en particular se encuentra en el carrito.
   const isInCart = (id) => {
     // devuelve true si el elemento existe en el array.
     return itemsAdded.some((item) => item.id === id);
   };
 
-  // ? Función mensaje y alerta para React Tostify.
-  const mensaje = (mensaje) => {
-    toast.success(mensaje, {
+  const message = (message) => {
+    toast.success(message, {
       position: "top-center",
       autoClose: 2000,
       hideProgressBar: false,
@@ -83,8 +76,8 @@ export const MiProvider = ({ children }) => {
     });
   };
 
-  const alerta = (mensaje) => {
-    toast.warn(mensaje, {
+  const alertMessage = (message) => {
+    toast.warn(message, {
       position: "top-center",
       autoClose: 2300,
       hideProgressBar: true,
@@ -104,8 +97,8 @@ export const MiProvider = ({ children }) => {
         itemsAdded,
         itemsCounter,
         purchaseValue,
-        mensaje,
-        alerta,
+        message,
+        alertMessage,
         toCart,
         setToCart,
       }}

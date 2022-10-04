@@ -33,21 +33,21 @@ label {
   font-size: 1.2em;
 }
 
-.counter__controlsbtn--agregar {
+.counter__controlsbtn--add {
   background-color: #4e4b4c;
 }
 
-.counter__controlsbtn--agregar:hover {
+.counter__controlsbtn--add:hover {
   background-color: #fa9eb5;
   color: #1b1a1a;
 }
 
-button.counter__controlsbtn--agregar:not(.counter__controlsbtn--disabled):hover {
+button.counter__controlsbtn--add:not(.counter__controlsbtn--disabled):hover {
   background-color: #fa9eb5;
   color: #1b1a1a;
 }
 
-.counter__controlsbtn--agregar:disabled {
+.counter__controlsbtn--add:disabled {
   background-color: #1b1a1a;
   color: #3a3838;
 }

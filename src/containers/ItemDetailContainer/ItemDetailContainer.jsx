@@ -1,8 +1,6 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import { React, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-// Importaciones para Promesa Firestore
 import { getFilms } from "../../utils/promise";
 
 import ItemDetail from "../../components/ItemDetail/ItemDetail";
@@ -10,7 +8,6 @@ import { CircleSpinnerOverlay } from "react-spinner-overlay";
 import "./ItemDetailContainer.css";
 
 function ItemDetailContainer() {
-  // SetState Hook
   const [movies, setMovies] = useState({});
   const [loading, setLoading] = useState(true);
   const { idItem } = useParams();
@@ -20,8 +17,8 @@ function ItemDetailContainer() {
     // Manejo la respuesta seteando el state con su valor.
     (async () => {
       try {
-        const respuesta = await getFilms();
-        setMovies(respuesta.find((item) => item.id === idItem));
+        const response = await getFilms();
+        setMovies(response.find((item) => item.id === idItem));
         setLoading(false);
       } catch (error) {
         console.log(error);

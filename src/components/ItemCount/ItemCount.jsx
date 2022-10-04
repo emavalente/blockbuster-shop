@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 import "./ItemCount.css";
 
 function ItemCount({ stock, onAdd }) {
+  const { alertMessage } = useContext(CartContext);
   const [count, setCount] = useState(0);
 
-  const sumarItem = () => {
-    count < stock ? setCount(count + 1) : alert("No quedan más productos en stock");
+  const plusItem = () => {
+    count < stock ? setCount(count + 1) : alertMessage(`El stock es de ${stock} unidades`);
   };
 
-  const restarItem = () => {
-    count <= stock && count > 1 ? setCount(count - 1) : alert("Agrega al menos 1 producto!");
+  const subtractItem = () => {
+    count <= stock && count > 1 ? setCount(count - 1) : alertMessage("Agrega al menos 1 producto!");
   };
 
   const isDisabled = () => {
@@ -21,17 +23,17 @@ function ItemCount({ stock, onAdd }) {
     <div className="counter">
       <p>Stock: {stock}</p>
       <div className="counter__controls">
-        <button className="counter__controlsbtn" onClick={restarItem}>
+        <button className="counter__controlsbtn" onClick={subtractItem}>
           -
         </button>
         <label>{count}</label>
-        <button className="counter__controlsbtn" onClick={sumarItem}>
+        <button className="counter__controlsbtn" onClick={plusItem}>
           +
         </button>
       </div>
       <button
         disabled={isDisabled()}
-        className={`counter__controlsbtn counter__controlsbtn--agregar ${
+        className={`counter__controlsbtn counter__controlsbtn--add ${
           isDisabled() ? "counter__controlsbtn--disabled" : null
         }`}
         onClick={() => {

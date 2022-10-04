@@ -1,8 +1,6 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import { React, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-// Importaciones para Promesa Firestore
 import { getFilms } from "../../utils/promise";
 
 import { CircleSpinnerOverlay } from "react-spinner-overlay";
@@ -10,11 +8,9 @@ import ItemList from "../../components/ItemList/ItemList";
 import "./ItemListContainer.css";
 
 function ItemListContainer() {
-  // SetState Hook
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // useParams Hook
   const { idType } = useParams();
 
   // componentDidUpdate del useEffect Hook. donde un componente necesita hacer algo al actualizarse la dependencia.

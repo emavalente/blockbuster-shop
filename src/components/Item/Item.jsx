@@ -8,8 +8,8 @@ function Item({ id, picture, title, genere, stars, price }) {
       <div className="itemCard__btn">
         <button title="Ver Detalle">
           <img src={picture} alt={`imagen de ${title}`} />
-          <div className="detalle">
-            <Link to={`/item/${id}`} className="btnDetalle">
+          <div className="detail">
+            <Link to={`/item/${id}`} className="btnDetail">
               Ver Detalle
             </Link>
           </div>
@@ -25,7 +25,7 @@ function Item({ id, picture, title, genere, stars, price }) {
             {stars}/10
           </p>
         </div>
-        <h3 className="itemCard__precio">{`Precio: US$ ${price.toFixed(2)}`}</h3>
+        <h3 className="itemCard__price">{`Precio: US$ ${price.toFixed(2)}`}</h3>
       </div>
     </div>
   );

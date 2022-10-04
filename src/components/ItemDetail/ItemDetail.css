@@ -3,6 +3,7 @@
   height: 60vh;
   background-color: rgb(43, 40, 40);
   border-radius: 10px;
+  overflow: hidden;
   display: flex;
   box-shadow: 0px 0px 20px #fa9eb5;
   font-size: 0.7rem;
@@ -138,13 +139,21 @@
 .description__trailer i {
   margin-right: 5px;
 }
-@media screen and (max-width: 425px) {
+
+@media screen and (max-width: 1366px) and (min-height: 617px) {
   .detail {
-    width: 85%;
-    height: 60vh;
-    flex-direction: column-reverse;
+    width: 65%;
+    height: 75vh;
     justify-content: space-between;
     font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .detail {
+    width: 90%;
+    font-size: 0.7rem;
+    position: relative;
   }
 
   .detail__description {
@@ -158,9 +167,12 @@
   }
 
   .detail__img {
+    height: auto;
+    position: absolute;
+    background-color: rgb(27, 26, 26, 0.8);
+    top: 70%;
     width: 100%;
-    align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .detail__img img {
@@ -186,21 +198,8 @@
     margin-bottom: 5px;
   }
 
-  .description__sinopsisTitle {
-    font-size: 1em;
-  }
-
+  .description__sinopsisTitle,
   .description__sinopsisText {
     font-size: 1em;
-    overflow: scroll;
-  }
-}
-
-@media screen and (max-width: 1366px) and (min-height: 617px) {
-  .detail {
-    width: 65%;
-    height: 75vh;
-    justify-content: space-between;
-    font-size: 0.7rem;
   }
 }

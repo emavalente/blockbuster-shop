@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { React, useContext } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 import { db } from "../../utils/firebaseConfig";
@@ -9,7 +9,7 @@ import { doc, collection, setDoc, updateDoc, increment } from "firebase/firestor
 import "./Cart.css";
 
 function Cart() {
-  const { itemsAdded, removeItem, cartCleaner, purchaseValue, mensaje } = useContext(CartContext);
+  const { itemsAdded, removeItem, cartCleaner, purchaseValue, message } = useContext(CartContext);
 
   // ? Función para crear orden de compra.
   const createOrder = async () => {
@@ -24,7 +24,7 @@ function Cart() {
     // Lo enviamos como un nuevo documento en una nueva colección.
     const orderRef = doc(collection(db, "orders"));
     await setDoc(orderRef, order);
-    mensaje(`Tu orden a sido generada correctamente: ID ${orderRef.id}`);
+    message(`Tu orden se generó correctamente: ID ${orderRef.id}`);
 
     // actualizamos el stock de los productos originales.
     itemsAdded.forEach(async (item) => {
@@ -45,7 +45,7 @@ function Cart() {
       <table className="cartTable">
         <thead>
           <tr>
-            <th className="cartTable__th--caratula">Caratula</th>
+            <th className="cartTable__th--flyer">Caratula</th>
             <th>Título</th>
             <th>Cantidad</th>
             <th>SubTotal</th>
@@ -79,7 +79,7 @@ function Cart() {
           ) : (
             <tr>
               <td colSpan={5}>
-                <p className="carritoVacio__message">¡Carrito Vacío!</p>
+                <p className="emptyCart__message">¡Carrito Vacío!</p>
               </td>
             </tr>
           )}
