@@ -12,19 +12,15 @@ export const MiProvider = ({ children }) => {
   const [toCart, setToCart] = useState(false);
 
   const addItem = (item, count, title) => {
-    // armo un objeto nuevo con las propiedades del item y le agrego la propiedad count.
-    const armedItem = { ...item, count };
-
-    // Verificar si hay items duplicados.
     // Si el armedItem existe en el array lo borro (newArray), luego a newArray le agrego un armedItem modificado.
+    if (isInCart(item.id)) {
+      const itemInCart = itemsAdded.find((i) => i.id === item.id);
 
-    if (isInCart(armedItem.id)) {
-      const itemInCart = itemsAdded.filter((i) => i.id === armedItem.id);
+      if (itemInCart.count + count <= item.stock) {
+        const newArray = itemsAdded.filter((i) => i.id !== item.id);
+        itemInCart.count += count;
+        newArray.push(itemInCart);
 
-      if (itemInCart[0].count + armedItem.count <= item.stock) {
-        const newArray = itemsAdded.filter((i) => i.id !== armedItem.id);
-        const newItem = { ...item, count: (armedItem.count += count) };
-        newArray.push(newItem);
         setItemsAdded(newArray);
         setToCart(true);
         message(`Se actualizó tu Film ${title}`);
@@ -32,6 +28,8 @@ export const MiProvider = ({ children }) => {
         alertMessage("Esta cantidad supera el stock, por favor reducela");
       }
     } else {
+      // armo un objeto nuevo con las propiedades del item le agrego la propiedad count y lo agrego al carrito.
+      const armedItem = { ...item, count };
       setItemsAdded([...itemsAdded, armedItem]);
       message(`Se agregaron al carrito: ${count} cantidades de ${title} `);
       setToCart(true);

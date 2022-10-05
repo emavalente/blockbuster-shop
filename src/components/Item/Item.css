@@ -64,15 +64,15 @@
 .itemCard .detail {
   width: 100px;
   height: 100px;
-  border-radius: 50%;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  left: 25%;
-  background-color: rgba(49, 46, 46, 0.7);
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(49, 46, 46, 0.7);
   color: #fa9eb5;
   opacity: 0;
   visibility: hidden;
@@ -111,8 +111,12 @@
   align-self: flex-end;
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 550px) {
   .itemCard {
-    width: 150px;
+    width: 170px;
+  }
+
+  .itemCard:hover .itemCard__info {
+    top: 62%;
   }
 }

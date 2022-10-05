@@ -149,7 +149,7 @@
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 750px) {
   .detail {
     width: 90%;
     font-size: 0.7rem;
@@ -170,7 +170,7 @@
     height: auto;
     position: absolute;
     background-color: rgb(27, 26, 26, 0.8);
-    top: 70%;
+    top: 68%;
     width: 100%;
     justify-content: flex-start;
   }

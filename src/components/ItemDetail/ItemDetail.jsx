@@ -24,6 +24,7 @@ function ItemDetail({ detail }) {
   const onAdd = (count) => {
     addItem(detail, count, title);
   };
+
   useEffect(() => {
     setToCart(false);
   }, []);

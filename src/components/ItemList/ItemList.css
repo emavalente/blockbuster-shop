@@ -8,9 +8,9 @@
   margin-bottom: 40px;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 1400px) {
   .cardContainer {
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     margin-bottom: 40px;
     grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));

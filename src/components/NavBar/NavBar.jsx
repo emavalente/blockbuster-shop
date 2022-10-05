@@ -17,7 +17,7 @@ function NavBar() {
         </div>
         <Link to="/">
           {" "}
-          <img src={branch} alt="logo"></img>
+          <img src={branch} title="Home" alt="logo"></img>
         </Link>
         <NavLinks />
         <CartWidget />
