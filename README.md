@@ -4,7 +4,7 @@
 
 ### _Desarrollado por Emanuel Valente_
 
-![elvideoclu-video.gif](./src/assets/img/elvideoclu_video.gif)
+![Ver Video Demostrativo!](https://drive.google.com/file/d/15TnJ0lRFSPV39urMTV_4uD83PkCEFw4R/view?usp=sharing)
 
 Se trata de un e-commerce que permite el alquiler de películas a elección permitiendo al usuario navegar por las diferentes categorias de productos y además poder acceder a un detaller de estos, agregar cantidades y manipular un carrito de compras.
 
@@ -17,7 +17,7 @@ Se trata de un e-commerce que permite el alquiler de películas a elección perm
 - react-router-dom
 - react-spinner-overlay
 
-## Instalación
+## Instalación:
 
 Para clonar el repositorio utiliza:
 
@@ -36,3 +36,7 @@ Iniciar la app:
 ```
 npm run start
 ```
+
+## Deploy:
+
+https://elvideoclu-shop.web.app/
