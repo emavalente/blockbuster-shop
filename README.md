@@ -1,12 +1,16 @@
 # Proyecto ReactJS - CODERHOUSE
 
-### _Nombre: ElVideoClu - movieshop_
+### _Nombre: ElVideoClu - filmshop_
 
 ### _Desarrollado por Emanuel Valente_
 
-![Ver Video Demostrativo!](https://drive.google.com/file/d/15TnJ0lRFSPV39urMTV_4uD83PkCEFw4R/view?usp=sharing)
+![ElVideoClu-filmshop.gif](./src/assets/img/ElVideoClu-filmshop.gif)
 
 Se trata de un e-commerce que permite el alquiler de películas a elección permitiendo al usuario navegar por las diferentes categorias de productos y además poder acceder a un detaller de estos, agregar cantidades y manipular un carrito de compras.
+
+## Deploy:
+
+https://elvideoclu-shop.web.app/
 
 ## Herramientas que se utilizaron:
 
@@ -36,7 +40,3 @@ Iniciar la app:
 ```
 npm run start
 ```
-
-## Deploy:
-
-https://elvideoclu-shop.web.app/
